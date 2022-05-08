@@ -1,6 +1,14 @@
 /* Universal Styles */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html, body {
+    font-family: nunito, Arial, sans-serif;
+}
 
 /* Nav */
 
