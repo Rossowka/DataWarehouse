@@ -20,13 +20,25 @@ html, body {
     --texts-color: #4B5D68;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Nav */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 50px 10px;
+}
 
 .logo {
     display: flex;
     align-items: flex-end;
     width: 50px;
     justify-content: space-between;
+    position: relative;
 }
 
 .logo .purple {
@@ -42,6 +54,46 @@ html, body {
     background-color: var(--pink);
     border-radius: 10px;
 }
+
+.menu {
+    display: none;
+}
+
+.fa-solid.fa-bars {
+    position: absolute;
+    font-size: 30px;
+    color: var(--bold-texts-color);
+    right: 10px;
+    top: 3px;
+}
+
+@media (min-width: 768px) {
+    .fa-solid.fa-bars {
+        display: none;
+    }
+
+    .menu {
+        flex-basis: 50%;
+        display: inline-block;
+    }
+    
+    .menu li {
+        display: inline;
+    }
+    
+    .menu li a {
+        color: var(--bold-texts-color);
+        padding: 0px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        line-height: 35px;
+    }
+    
+    .menu li a:hover {
+        font-weight: bold;
+    }
+}
+
 
 /* Header */
 
