@@ -6,9 +6,11 @@
     box-sizing: border-box;
 }
 
-html, body {
+body {
     font-family: nunito, Arial, sans-serif;
     background: linear-gradient(#F6FAFD 10%, #fff 100%) no-repeat;
+    max-width: 1200px;
+    margin: auto;
 }
 
 :root {
@@ -24,13 +26,18 @@ a {
     text-decoration: none;
 }
 
+.padding {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 /* Nav */
 
 nav {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 50px 10px;
+    padding: 50px 0px;
     position: relative;
 }
 
@@ -127,12 +134,78 @@ nav button {
 button i {
     color: var(--purple);
     font-size: 18px;
-    padding: 0 5px;
 }
 
 /* Header */
 
+header {
+    padding-top: 5em;
+    padding-bottom: 5em;
+    position: relative;
+}
 
+header h1 {
+    font-family: Helvetica, nunito, sans-serif;
+    font-size: 4.5em;
+    text-align: center;
+    font-weight: bold;
+    color: var(--bold-texts-color);
+}
+
+header p {
+    width: 80%; 
+    padding: 50px 0;
+    font-size: 18px;
+    margin: auto;
+    text-align: center;
+}
+
+header button {
+    line-height: 60px;
+    width: 170px;
+    background-color: var(--purple);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+}
+
+img {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    bottom: 0px;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+@media (min-width: 992px) {
+    header h1 {
+        width: 60%;
+        text-align: left;
+    }
+    
+    header p {
+        width: 30%;
+        margin: 0;
+        text-align: left;
+    }
+
+    header button {
+        margin: 0;
+        display: inline;
+    }
+
+    img {
+        width: 70%;
+        opacity: 1;
+        top: 160px;
+    }
+}
 
 /* Main */
 
