@@ -8,11 +8,40 @@
 
 html, body {
     font-family: nunito, Arial, sans-serif;
+    background: linear-gradient(#F6FAFD 10%, #fff 100%) no-repeat;
+}
+
+:root {
+    --purple: rgb(156, 105, 226);
+    --pink: #F063B8;
+    --blue: #2D9CDB;
+    --mint: #68C9BA;
+    --bold-texts-color: #212353;
+    --texts-color: #4B5D68;
 }
 
 /* Nav */
 
+.logo {
+    display: flex;
+    align-items: flex-end;
+    width: 50px;
+    justify-content: space-between;
+}
 
+.logo .purple {
+    height: 20px;
+    width: 20px;
+    background-color: var(--purple);
+    border-radius: 50%;
+}
+
+.logo .pink {
+    height: 35px;
+    width: 20px;
+    background-color: var(--pink);
+    border-radius: 10px;
+}
 
 /* Header */
 
