@@ -6,16 +6,11 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: 18px;
-}
-
 body {
     font-family: nunito, Arial, sans-serif;
     background: linear-gradient(#F6FAFD 10%, #fff 100%) no-repeat;
     max-width: 1200px;
     margin: auto;
-    padding: 0 20px;
 }
 
 :root {
@@ -32,23 +27,21 @@ a {
     text-decoration: none;
 }
 
-h1, h2 {
-    font-family: Helvetica, nunito, sans-serif;
+.padding {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 2.5em;
+    font-family: helvetica, nunito, sans-serif;
 }
 
 p {
+    font-size: 18px;
     letter-spacing: .5px;
     color: var(--texts-color);
-}
-
-@media (min-width: 768px) {
-    h2 {
-        font-size: 2.5rem;
-    }
+    padding-top: 2em;
 }
 
 /* Nav */
@@ -103,37 +96,11 @@ nav {
 }
 
 .fa-solid.fa-bars {
-    position: fixed;
+    position: absolute;
     font-size: 30px;
     color: var(--bold-texts-color);
-    left: 33px;
-}
-
-@media (min-width: 768px) {
-    .fa-solid.fa-bars {
-        display: none;
-    }
-
-    .menu {
-        flex-basis: 80%;
-        display: inline-block;
-    }
-    
-    .menu li {
-        display: inline;
-    }
-    
-    .menu li a {
-        color: var(--bold-texts-color);
-        padding: 0px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        line-height: 35px;
-    }
-    
-    .menu li a:hover {
-        font-weight: bold;
-    }
+    right: 10px;
+    top: 3px;
 }
 
 nav button {
@@ -158,12 +125,14 @@ button i {
 /* Header */
 
 header {
-    padding: 4.5rem 0;
+    padding-top: 5em;
+    padding-bottom: 5em;
     position: relative;
 }
 
 header h1 {
-    font-size: 2em;
+    font-family: Helvetica, nunito, sans-serif;
+    font-size: 4.5em;
     text-align: center;
     font-weight: bold;
     color: var(--bold-texts-color);
@@ -194,48 +163,16 @@ header button {
 header img {
     position: absolute;
     width: 100%;
-    top: 0;
+    right: 0;
+    bottom: 0px;
     z-index: -1;
     opacity: 0.5;
-}
-
-@media (min-width: 600px) {
-    header h1 {
-        font-size: 3rem;
-    }
-}
-
-@media (min-width: 992px) {
-    header h1 {
-        font-size: 4.5rem;
-        width: 60%;
-        text-align: left;
-    }
-    
-    header p {
-        width: 30%;
-        margin: 0;
-        text-align: left;
-    }
-
-    header button {
-        margin: 0;
-        display: inline;
-    }
-
-    header img {
-        width: 70%;
-        opacity: 1;
-        top: 160px;
-        right: 0;
-        bottom: 0px;
-    }
 }
 
 /* Main */
 
 main {
-    margin: 2rem auto;
+    margin: 5em auto;
 }
 
 #about {
@@ -251,65 +188,28 @@ main {
 }
 
 #about img {
-    max-width: 330px;
+    width: 100%;
+    padding-right: 2em;
+    padding-bottom: 2em;
+    max-width: 504px;
     display: block;
-    margin: -10% auto 0 auto;
+    margin: auto;
 }
 
 .container {
-    margin: 2rem 1rem;
+    margin: 1em;
     display: flex;
     text-align: center;
     flex-direction: column;
     justify-content: center;
 }
 
-.container h2 {
-    padding-bottom: 2rem;
-    width: 90%;
-    margin: auto
-}
-
-.container p {
-    width: 80%;
-    margin: auto;
-}
-
-@media (min-width: 992px) {
-    main {
-        margin: 5rem auto;
-    }
-
-    .card {
-        flex-direction: initial;
-    }
-
-    #about img {
-        float: left;
-        width: 40%;
-        padding-bottom: 2rem;
-        margin: auto;
-    }
-    
-    .container {
-        margin: 0 5rem;
-        text-align: left;
-    }
-
-    .container h2 {
-        width: 100%;
-    }
-    
-    .container p {
-        width: 100%;
-    }
-}
-
 #features .title {
-    padding: 10em 0;
+    padding-top: 5em;
+    padding-bottom: 2em;
     text-align: center;
     margin: auto;
-    width: 50%;
+    width: 100%;
 }
 
 .offer {
@@ -318,13 +218,13 @@ main {
     gap: 40px 40px;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .feature {
-    /* position: relative; */
-    width: 48%;
+    position: relative; /**/
     display: flex;
-    align-items: center;
+    flex-direction: column;
     background: 
         url(./images/features/feature1/white-shape.svg) no-repeat top -30px right 5px,
         url(./images/features/feature1/small-circle.svg) no-repeat right 120px top 30px,
@@ -351,17 +251,16 @@ main {
 }
 
 .icon {
-    /* position: absolute;
-    bottom: 50%; */
-    width: 40%;
+    position: absolute; /**/
+    align-self: center;
     max-height: 211px;
+    max-width: 250px;
 }
 
 .background {
     display: flex;
     justify-content: space-between;
-    margin: 20px 40px;
-    padding-top: 40px;
+    margin: 1rem 2rem;
 }
 
 .container button {
@@ -374,7 +273,137 @@ main {
     font-family: nunito, helvetica, sans-serif;
 }
 
-
 /* Footer */
 
 
+/* Media Queries */
+/* - Nav */
+
+@media (min-width: 768px) {
+    .fa-solid.fa-bars {
+        display: none;
+    }
+
+    .menu {
+        flex-basis: 80%;
+        display: inline-block;
+    }
+    
+    .menu li {
+        display: inline;
+    }
+    
+    .menu li a {
+        color: var(--bold-texts-color);
+        padding: 0px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        line-height: 35px;
+    }
+    
+    .menu li a:hover {
+        font-weight: bold;
+    }
+}
+
+/* - Header */
+
+@media (min-width: 992px) {
+    header h1 {
+        width: 60%;
+        text-align: left;
+    }
+    
+    header p {
+        width: 30%;
+        margin: 0;
+        text-align: left;
+    }
+
+    header button {
+        margin: 0;
+        display: inline;
+    }
+
+    header img {
+        width: 70%;
+        opacity: 1;
+        top: 160px;
+    }
+}
+
+/* - Main */
+
+@media (min-width: 992px) {
+    main {
+        margin: 10em auto;
+    }
+
+    .card {
+        flex-direction: initial;
+    }
+
+    #about img {
+        float: left;
+        width: 40%;
+    }
+    
+    .container {
+        margin: 0 5em;
+        text-align: left;
+    }
+}
+
+@media (max-width: 992px) {
+    .feature {
+        background-size: contain;
+        background-position: center;
+    }
+
+    .feature:nth-of-type(2) {
+        background-size: contain;
+        background-position: center;
+    }
+
+    .feature:nth-of-type(3) {
+        background-size: contain;
+        background-position: center;
+    }
+
+    .feature:nth-of-type(4) {
+        background-size: contain;
+        background-position: center;
+    }
+
+    .container p {
+        padding-top: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    #features .title {
+        width: 50%;
+    }
+
+    .offer {
+        gap: 40px 40px;
+    }
+
+    .feature {
+        width: 48%;
+        flex-direction: initial;
+    }
+
+    .icon {
+        width: 40%;
+        position: initial;
+    }
+
+    .background {
+        padding-top: 2rem;
+    }
+
+    .container button {
+        text-align: left;
+    }
+}
