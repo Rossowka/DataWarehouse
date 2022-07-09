@@ -41,7 +41,7 @@ h2 {
 }
 
 p {
-    letter-spacing: .5px;
+    letter-spacing: 1px;
     color: var(--texts-color);
 }
 
@@ -69,7 +69,7 @@ nav {
     position: relative;
 }
 
-.logo .purple {
+.logo__purple {
     height: 20px;
     width: 20px;
     background-color: var(--purple);
@@ -81,7 +81,7 @@ nav {
     animation-delay: 2s;
 }
 
-.logo .pink {
+.logo__pink {
     height: 35px;
     width: 20px;
     background-color: var(--pink);
@@ -118,11 +118,11 @@ nav {
         flex-basis: 80%;
         display: inline-block;
     }
-    
+
     .menu li {
         display: inline;
     }
-    
+
     .menu li a {
         color: var(--bold-texts-color);
         padding: 0px 20px;
@@ -130,7 +130,7 @@ nav {
         cursor: pointer;
         line-height: 35px;
     }
-    
+
     .menu li a:hover {
         font-weight: bold;
     }
@@ -173,7 +173,7 @@ header h1 {
 }
 
 header p {
-    width: 80%; 
+    width: 80%;
     padding: 50px 0;
     color: var(--bold-texts-color);
     margin: auto;
@@ -214,7 +214,7 @@ header img {
         width: 60%;
         text-align: left;
     }
-    
+
     header p {
         width: 30%;
         margin: 0;
@@ -247,7 +247,7 @@ main {
     overflow: hidden;
 }
 
-.card {
+.about__card {
     display: flex;
     align-items: center;
     flex-direction: column-reverse;
@@ -259,7 +259,7 @@ main {
     margin: -10% auto 0 auto;
 }
 
-.container {
+.about__content {
     margin: 2rem 1rem;
     display: flex;
     text-align: center;
@@ -267,13 +267,13 @@ main {
     justify-content: center;
 }
 
-.container h2 {
+.about__content h2 {
     padding-bottom: 2rem;
     width: 90%;
     margin: auto
 }
 
-.container p {
+.about__content p {
     width: 80%;
     margin: auto;
 }
@@ -283,7 +283,7 @@ main {
         margin: 5rem auto;
     }
 
-    .card {
+    .about__card {
         flex-direction: initial;
     }
 
@@ -293,33 +293,35 @@ main {
         padding-bottom: 2rem;
         margin: auto;
     }
-    
-    .container {
+
+    .about__content {
         margin: 0 5rem;
         text-align: left;
     }
 
-    .container h2 {
+    .about__content h2 {
         width: 100%;
     }
-    
-    .container p {
+
+    .about__content p {
         width: 100%;
     }
 }
 
-#features .title {
+/* Features */
+
+.features__title {
     padding: 10rem 0 5rem 0;
     text-align: center;
     margin: auto;
     width: 60%;
 }
 
-#features .title p {
+.features__title p {
     padding-top: 3rem;
 }
 
-.offer {
+.features__container {
     display: grid;
     justify-items: center;
     justify-content: center;
@@ -328,42 +330,42 @@ main {
     gap: 45px;
 }
 
-.feature {
+.features__element {
     height: 365px;
     max-width: 100%;
     display: flex;
     align-items: center;
-    background: 
+    background:
         url(./images/features/feature1/white-shape.svg) no-repeat top -30px right 5px,
         url(./images/features/feature1/small-circle.svg) no-repeat right 120px top 30px,
         url(./images/features/feature1/rectangle-1.svg) no-repeat right 0;
 }
 
-.feature:nth-of-type(2) {
-    background: 
+.features__element:nth-of-type(2) {
+    background:
         url(./images/features/feature2/white-shape.svg) no-repeat bottom -25px right 0,
         url(./images/features/feature2/rectangle-2.svg) no-repeat right 0;
 }
 
-.feature:nth-of-type(3) {
-    background: 
+.features__element:nth-of-type(3) {
+    background:
         url(./images/features/feature3/circle.svg) no-repeat top 20px right 20px,
         url(./images/features/feature3/rectangle-3.svg) no-repeat right 0;
 }
 
-.feature:nth-of-type(4) {
-    background: 
+.features__element:nth-of-type(4) {
+    background:
         url(./images/features/feature4/white-shape.svg) no-repeat top -15px right 65px,
         url(./images/features/feature4/small-circle.svg) no-repeat bottom 30px right 30px,
         url(./images/features/feature4/rectangle-4.svg) no-repeat right 0;
 }
 
-.icon {
+.features__icon {
     max-width: 100%;
     height: auto;
 }
 
-.background {
+.features--background {
     display: flex;
     justify-content: space-between;
     margin: 20px 40px;
@@ -371,12 +373,16 @@ main {
     flex-shrink: 1;
 }
 
-.background p {
+.features--background p {
     font-size: 16px;
     padding: 20px 0;
 }
 
-.container button {
+.features__content {
+    flex-direction: column;
+}
+
+.features__content button {
     border: none;
     background-color: transparent;
     font-size: 16px;
@@ -390,62 +396,207 @@ main {
 }
 
 @media (max-width: 992px) {
-    .offer {
+    .features__container {
         grid-template-columns: 1fr;
         gap: 20px;
     }
 
-    .feature {
-        height: auto;
-        background-size: contain;
-        background-position: center;
-    }
-
-    .feature:nth-of-type(2) {
-        background-size: contain;
-        background-position: center;
-    }
-
-    .feature:nth-of-type(3) {
-        background-size: contain;
-        background-position: center;
-    }
-
-    .feature:nth-of-type(4) {
+    .features__element,
+    .features__element:nth-of-type(2),
+    .features__element:nth-of-type(3),
+    .features__element:nth-of-type(4) {
         background-size: contain;
         background-position: center;
     }
 }
 
 @media (min-width: 601px) {
-    .background {
+    .features--background {
         text-align: left;
     }
 
-    .background p {
+    .features--background p {
         margin: 0;
     }
 }
 
 @media (max-width: 600px) {
-    .feature {
+    .features__element {
         flex-direction: column;
     }
 
-    #features .title {
+    .features__title {
         padding: 5rem 0;
     }
 
-    .container button {
+    .features__content button {
         align-self: center;
     }
 
-    .background, .background p {
+    .features--background, .features--background p {
         margin: auto;
         width: 80%;
     }
 }
 
+/* Testimonials */
+
+#testimonials {
+    margin-top: 5rem;
+    background-color: var(--purple);
+    border-radius: 50px;
+    padding-left: 90px;
+    margin-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 710px;
+}
+
+#testimonials h2 {
+    color: #fff;
+}
+
+.testimonials__slides {
+    display: flex;
+    align-items: center;
+    height: 50%;
+}
+
+.testimonials__item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: #fff;
+    border-radius: 50px;
+    flex-shrink: 0;
+    height: 100%;
+    margin: 0 10px;
+    border: 1px solid var(--purple);
+    width: 40%;
+    box-shadow: 0px 20px 0px rgba(156, 105, 226, 0.3);
+}
+
+.testimonials__item:first-of-type {
+    width: 65%;
+}
+
+.testimonials__container {
+    display: flex;
+    justify-content: center;
+    height: 75%;
+
+}
+
+.testimonials__content {
+    width: 65%;
+    padding: 20px 10px 0 30px;
+    overflow: hidden;
+}
+
+.testimonials__content:first-of-type {
+    padding: 20px 60px 0 30px;
+}
+
+.testimonials__content p {
+    line-height: 1.7;
+}
+
+.testimonials--link {
+    font-size: 14px;
+    padding: 10px 0 40px 0;
+    color: var(--purple);
+    display: block;
+}
+
+.testimonials--shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background: linear-gradient(-90deg, #fff 25%, transparent 60%);
+}
+
+.testimonials__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 75px;
+}
+
+.testimonials__dots {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50px;
+}
+
+.testimonials--dot {
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.testimonials--dot:nth-of-type(1) {
+    background-color: var(--pink);
+}
+
+.testimonials--dot:hover {
+    transform: scale(2);
+}
+
+.testimonials__arrows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    width: 50px;
+    color: #fff;
+}
+
+.fa-arrow-right {
+    opacity: .5;
+}
+
+@media (max-width: 992px) {
+    #testimonials {
+        padding: 0;
+        padding-bottom: 90px;
+        margin-bottom: 50px;
+        display: flex;
+        overflow-y: hidden;
+    }
+
+    .testimonials__slides {
+        flex-direction: column;
+        justify-content: flex-start;
+        order: 2;
+    }
+
+    .testimonials__item, .testimonials__item:first-of-type {
+        width: 90%;
+        margin-bottom: 20px;
+
+    }
+
+    .testimonials__nav {
+         justify-content: center;
+         margin: -50px;
+    }
+
+    .testimonials__arrows {
+        display: none;
+    }
+
+    .testimonials--shadow {
+        background: linear-gradient(0deg, #fff 35%, transparent 70%);
+    }
+}
 
 /* Footer */
 

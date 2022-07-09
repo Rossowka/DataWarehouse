@@ -1,103 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap&subset=latin-ext"
-    rel="stylesheet">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Data Warehouse</title>
-    <script src="https://kit.fontawesome.com/8d1825da9a.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <nav>
-        <div class="logo">
-            <div class="purple"></div>
-            <div class="pink"></div>
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        <ul class="menu">
-            <li><a href="#about">About</a></li>
-            <li><a href="#">Help</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Signup</a></li>
-        </ul>
-        <button>
-            Request Demo <i class="fa-solid fa-arrow-right-long padding"></i>
-        </button>
-    </nav>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap&subset=latin-ext"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="reset.css" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Data Warehouse</title>
+		<script
+			src="https://kit.fontawesome.com/8d1825da9a.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<nav>
+			<div class="logo">
+				<div class="logo__purple"></div>
+				<div class="logo__pink"></div>
+				<i class="fa-solid fa-bars"></i>
+			</div>
+			<ul class="menu">
+				<li><a href="#about">About</a></li>
+				<li><a href="#">Help</a></li>
+				<li><a href="#features">Features</a></li>
+				<li><a href="#">Signup</a></li>
+			</ul>
+			<button>
+				Request Demo <i class="fa-solid fa-arrow-right-long"></i>
+			</button>
+		</nav>
 
-    <header>
-        <h1>Save your data storage here.</h1>
-        <p>Data Warehouse is a data storage area that has been tested for security, so you can store your data here safely but not be afraid of being stolen by others.</p>
-        <button>Learn more</button>
-        <img src="./images/landing-page-image.png"/>
-    </header>
+		<header>
+			<h1>Save your data storage here.</h1>
+			<p>
+				Data Warehouse is a data storage area that has been tested for security,
+				so you can store your data here safely but not be afraid of being stolen
+				by others.
+			</p>
+			<button>Learn more</button>
+			<img src="./images/landing-page-image.png" />
+		</header>
 
-    <main>
-        <section id="about">
-            <div class="card">
-                <img src="images/about-us-image.png">
-                <div class="container">
-                    <h2>We are a high-level data storage bank</h2>
-                    <p>The place to store various data that you can access at any time through the internet and where you can carry it. This very flexible storage area has a high level of security. To enter into your own data you must enter the password that you created when you registered in this Data Warehouse.</p>    
-                </div>
-            </div>
-        </section>
+		<main>
+			<section id="about">
+				<div class="about__card">
+					<img src="images/about-us-image.png" />
+					<div class="about__content">
+						<h2>We are a high-level data storage bank</h2>
+						<p>
+							The place to store various data that you can access at any time
+							through the internet and where you can carry it. This very
+							flexible storage area has a high level of security. To enter into
+							your own data you must enter the password that you created when
+							you registered in this Data Warehouse.
+						</p>
+					</div>
+				</div>
+			</section>
 
-        <section id="features">
-            <div class="title">
-                <h2>Features</h2>
-                <p>Some of the features and advantages that we provide for those of you who store data in this Data Warehouse.</p>    
-            </div>
-            <div class="offer">
-                <div class="feature">
-                    <div><img class="icon" src="./images/features/feature1/img-rect1.png"></div>
-                    <div class="container background">
-                        <h3>Search Data</h3>
-                        <p>Don’t worry if your data is very large, the Data Warehoue provides a search engine, which is useful for making it easier to find data effectively saving time.</p>
-                        <button>Learn more <i class="fa-solid fa-arrow-right-long padding"></i></button>
+			<section id="features">
+				<div class="features__title">
+					<h2>Features</h2>
+					<p>
+						Some of the features and advantages that we provide for those of you
+						who store data in this Data Warehouse.
+					</p>
+				</div>
+				<div class="features__container">
+					<div class="features__element">
+						<div>
+							<img
+								class="features__icon"
+								src="./images/features/feature1/img-rect1.png"
+							/>
+						</div>
+						<div class="features__content features--background">
+							<h3>Search Data</h3>
+							<p>
+								Don’t worry if your data is very large, the Data Warehoue
+								provides a search engine, which is useful for making it easier
+								to find data effectively saving time.
+							</p>
+							<button>
+								Learn more <i class="fa-solid fa-arrow-right-long padding"></i>
+							</button>
+						</div>
+					</div>
+
+					<div class="features__element">
+						<div>
+							<img
+								class="features__icon"
+								src="./images/features/feature2/img-rect2.png"
+							/>
+						</div>
+						<div class="features__content features--background">
+							<h3>24 Hours Access</h3>
+							<p>
+								Access is given 24 hours a full morning to night and meet again
+								in the morning, giving you comfort when you need data when
+								urgent.
+							</p>
+							<button>
+								Learn more <i class="fa-solid fa-arrow-right-long padding"></i>
+							</button>
+						</div>
+					</div>
+
+					<div class="features__element">
+						<div>
+							<img
+								class="features__icon"
+								src="./images/features/feature3/img-rect3.png"
+							/>
+						</div>
+						<div class="features__content features--background">
+							<h3>Print Out</h3>
+							<p>
+								Print out service gives you convenience if someday you need
+								print data, just edit it all and just print it.
+							</p>
+							<button>
+								Learn more <i class="fa-solid fa-arrow-right-long padding"></i>
+							</button>
+						</div>
+					</div>
+
+					<div class="features__element">
+						<div>
+							<img
+								class="features__icon"
+								src="./images/features/feature4/img-rect4.png"
+							/>
+						</div>
+						<div class="features__content features--background">
+							<h3>Security Code</h3>
+							<p>
+								Data Security is one of our best facilities. Allows for your
+								files to be safer. The file can be secured with a code or
+								password that you created, so only you can open the file.
+							</p>
+							<button>
+								Learn more <i class="fa-solid fa-arrow-right-long padding"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="testimonials">
+				<h2>Testimonials</h2>
+				<div class="testimonials__slides">
+					<div class="testimonials__item">
+						<div class="testimonials__container">
+							<div>
+								<img src="./images/testimonials/John Fang.svg" />
+							</div>
+							<div class="testimonials__content">
+								<h4>John Fang</h4>
+								<a role="link" class="testimonials--link">wordfaang.com</a>
+								<p>
+									Suspendisse ultrices at diam lectus nullam. Nisl, sagittis
+									viverra enim erat tortor ultricies massa turpis. Arcu pulvinar
+									aenean nam laoreet nulla.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="testimonials__item">
+						<div class="testimonials__container">
+							<div>
+								<img src="./images/testimonials/John Fang.svg" />
+							</div>
+							<div class="testimonials__content">
+								<h4>John Fang</h4>
+								<a role="link" class="testimonials--link">wordfaang.com</a>
+								<p>
+									Suspendisse ultrices at diam lectus nullam. Nisl, sagittis
+									viverra enim erat tortor ultricies massa turpis. Arcu pulvinar
+									aenean nam laoreet nulla.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="testimonials__item">
+						<div class="testimonials__container">
+							<div>
+								<img src="./images/testimonials/John Fang.svg" />
+							</div>
+							<div class="testimonials__content">
+								<h4>John Fang</h4>
+								<a role="link" class="testimonials--link">wordfaang.com</a>
+								<p>
+									Suspendisse ultrices at diam lectus nullam. Nisl, sagittis
+									viverra enim erat tortor ultricies massa turpis. Arcu pulvinar
+									aenean nam laoreet nulla.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="testimonials--shadow"></div>
+					</div>
+				</div>
+                <div class="testimonials__nav">
+                    <div class="testimonials__dots">
+                        <div class="testimonials--dot"></div>
+                        <div class="testimonials--dot"></div>
+                        <div class="testimonials--dot"></div>
+                        <div class="testimonials--dot"></div>
+                    </div>
+                    <div class="testimonials__arrows">
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                        <i class="fa-solid fa-arrow-right"></i>
                     </div>
                 </div>
+			</section>
+		</main>
 
-                <div class="feature">
-                    <div><img class="icon" src="./images/features/feature2/img-rect2.png"></div>
-                    <div class="container background">
-                        <h3>24 Hours Access</h3>
-                        <p>Access is given 24 hours a full morning to night and meet again in the morning, giving you comfort when you need data when urgent.</p>
-                        <button>Learn more <i class="fa-solid fa-arrow-right-long padding"></i></button>
-                    </div>
-                </div>
-
-                <div class="feature">
-                    <div><img class="icon" src="./images/features/feature3/img-rect3.png"></div>
-                    <div class="container background">
-                        <h3>Print Out</h3>
-                        <p>Print out service gives you convenience if someday you need print data, just edit it all and just print it.</p>
-                        <button>Learn more <i class="fa-solid fa-arrow-right-long padding"></i></button>
-                    </div>
-                </div>
-
-                <div class="feature">
-                    <div><img class="icon" src="./images/features/feature4/img-rect4.png"></div>
-                    <div class="container background">
-                        <h3>Security Code</h3>
-                        <p>Data Security is one of our best facilities. Allows for your files to be safer. The file can be secured with a code or password that you created, so only you can open the file.</p>
-                        <button>Learn more <i class="fa-solid fa-arrow-right-long padding"></i></button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section></section>
-    </main>
-
-    <footer>
-        <section></section>
-        <section></section>
-        <section></section>
-    </footer>
-</body>
+		<footer>
+			<section></section>
+			<section></section>
+			<section></section>
+		</footer>
+	</body>
 </html>
