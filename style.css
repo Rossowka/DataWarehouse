@@ -16,6 +16,7 @@ body {
     max-width: 1200px;
     margin: auto;
     padding: 0 20px;
+    overflow-x: hidden;
 }
 
 :root {
@@ -102,6 +103,22 @@ nav {
     display: none;
 }
 
+.menu li {
+    display: inline;
+}
+
+.menu li a {
+    color: var(--bold-texts-color);
+    padding: 0px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 35px;
+}
+
+.menu li a:hover {
+    font-weight: bold;
+}
+
 .fa-solid.fa-bars {
     position: fixed;
     font-size: 30px;
@@ -118,25 +135,9 @@ nav {
         flex-basis: 80%;
         display: inline-block;
     }
-
-    .menu li {
-        display: inline;
-    }
-
-    .menu li a {
-        color: var(--bold-texts-color);
-        padding: 0px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        line-height: 35px;
-    }
-
-    .menu li a:hover {
-        font-weight: bold;
-    }
 }
 
-nav button {
+.request-demo {
     padding: 20px 20px;
     border-radius: 50px;
     border: none;
@@ -145,15 +146,18 @@ nav button {
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    position: absolute;
-    right: 10px;
-    bottom: 37.5px;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-button i {
+.request-demo:nth-of-type(1) {
+    position: absolute;
+    right: 10px;
+    bottom: 37.5px;
+}
+
+.request-demo i {
     color: var(--purple);
     font-size: 22px;
 }
@@ -180,7 +184,7 @@ header p {
     text-align: center;
 }
 
-header button {
+.learn-more {
     line-height: 60px;
     width: 170px;
     background-color: var(--purple);
@@ -221,7 +225,7 @@ header img {
         text-align: left;
     }
 
-    header button {
+    .learn-more {
         margin: 0;
         display: inline;
     }
@@ -398,7 +402,7 @@ main {
 @media (max-width: 992px) {
     .features__container {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 120px;
     }
 
     .features__element,
@@ -436,6 +440,14 @@ main {
     .features--background, .features--background p {
         margin: auto;
         width: 80%;
+    }
+
+    .features__container h3 {
+        text-align: center;
+    }
+
+    .features__container {
+        margin-bottom: 10rem;
     }
 }
 
@@ -567,7 +579,6 @@ main {
     #testimonials {
         padding: 0;
         padding-bottom: 90px;
-        margin-bottom: 50px;
         display: flex;
         overflow-y: hidden;
     }
@@ -600,4 +611,215 @@ main {
 
 /* Footer */
 
+footer {
+    position: relative;
+    width: 100%;
+    padding: 100px 0;
+}
 
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--purple);
+    opacity: .2;
+}
+
+.footer--grid {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 1fr 1fr 2fr 1fr;
+    grid-template-areas: "title title button-left button-right"
+        ". . . ."
+        "contact about help social"
+        "copyright copyright . chat";
+    width: 100%;
+    min-height: 500px;
+}
+
+.footer--grid h3 {
+    font-size: 1rem;
+    font-family: nunito, Arial, sans-serif;
+    color: var(--bold-texts-color);
+}
+
+.cta__content {
+    justify-self: center;
+    align-self: center;
+    grid-area: title;
+}
+
+.learn-more:nth-last-of-type(2) {
+    background-color: var(--pink);
+    margin: 0;
+    justify-self: end;
+    align-self: center;
+    grid-area: button-left;
+}
+
+.footer--grid .request-demo {
+    align-self: center;
+    justify-self: end;
+    grid-area: button-right;
+}
+
+.footer__contact {
+    align-self: center;
+    grid-area: contact;
+    line-height: 1.8;
+}
+
+.contact--company {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.contact--address {
+    padding-top: 5rem;
+    font-size: 0.8rem;
+}
+
+.contact--address p:first-child {
+    color: var(--bold-texts-color);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer__about {
+    grid-area: about;
+    justify-self: end;
+}
+
+.footer__help {
+    grid-area: help;
+    justify-self: center;
+}
+
+.footer__social {
+    grid-area: social;
+}
+
+.footer--menu .menu {
+    display: block;
+    font-size: 16px;
+    line-height: 2.5;
+}
+
+.footer--menu .menu li {
+    display: flex;
+}
+
+.footer--menu .menu li a {
+    padding: 0;
+}
+
+.footer--menu h4 {
+    font-size: 0.9rem;
+    font-family: nunito, Arial, sans-serif;
+    color: var(--bold-texts-color);
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    margin-bottom: 3.5rem;
+}
+
+.social--container {
+    display: flex;
+    gap: 20px;
+}
+
+.footer--icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+.footer--icon::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: var(--bold-texts-color);
+    opacity: .1;
+    z-index: -1;
+}
+
+.footer__chat .footer--icon::before {
+    background-color: var(--purple);
+    opacity: .2;
+}
+
+.footer--icon .fab {
+    color: #fff;
+    font-size: 16px;
+}
+
+.footer__chat {
+    grid-area: chat;
+    justify-self: end;
+    align-self: end;
+}
+
+.footer--icon .fas {
+    color: var(--purple);
+    font-size: 30px;
+}
+
+.footer__copyright {
+    grid-area: copyright;
+    align-self: end;
+    font-size: 12px;
+    color: var(--texts-color);
+}
+
+@media (max-width: 992px) {
+   .footer--grid {
+        grid-template-rows: .5fr .5fr 1fr, .3fr 1fr;
+        grid-template-areas: ". title title ."
+            "button-left button-left button-right button-right"
+            "contact contact about help"
+            "social social chat chat"
+            "copyright copyright copyright copyright";
+        width: 100%;
+        min-height: 500px;
+   }
+
+   .learn-more:nth-last-of-type(2) {
+        justify-self: center;
+    }
+
+    .request-demo {
+        justify-self: center;
+    }
+
+    .footer__social h4 {
+        display: none;
+    }
+
+    .footer__social {
+        display: flex;
+        align-items: center;
+    }
+
+    .footer__chat {
+        justify-self: end;
+        align-self: center;
+    }
+
+    .footer__copyright {
+        justify-self: center;
+    }
+
+    .footer__copyright p {
+        display: inline;
+    }
+}
